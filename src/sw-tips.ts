@@ -1,1 +1,1 @@
-console.log("sw-tips.js");
+console.log("sw-tips.js")

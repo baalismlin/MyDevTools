@@ -15,13 +15,33 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js']
   },
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, 'dist'),
+    },
+    port: 3000,
+    hot: true,
+    open: {
+      target: ['sidepanel/sidepanel.html'],
+      app: {
+        name: 'Google Chrome'
+      }
+    },
+    compress: true,
+    historyApiFallback: true,
+  },
   module: {
     rules: [
       {
         test: /\.ts$/,
         use: 'ts-loader',
         exclude: /node_modules/
-      }
+      },
+      {
+        test: /\.css$/i,
+        include: path.resolve(__dirname, 'src'),
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+      },
     ]
   },
   devtool: 'source-map',

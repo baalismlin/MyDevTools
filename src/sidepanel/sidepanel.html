@@ -3,15 +3,25 @@
 
 <head>
   <title>Side Panel</title>
-  <link rel="stylesheet" type="text/css" href="sidepanel.css">
 </head>
 
-<body>
-  <div id="content">
-    <h1>Side Panel</h1>
-    <p>This is the side panel content.</p>
-    <button id="sideButton">Click Me</button>
+<body class="font-mono">
+  <div class="container mx-auto">
+    <label class="text-gray-700" for="timestamp">Timestamp:</label>
+    <input
+      class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      type="text" id="timestamp" />
+
+    <button
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+      type="button" id="convertButton">Convert</button>
+
+    <label class="text-gray-700">DateTime:</label>
+    <label
+      class="appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      id="datetimeLabel"></label>
   </div>
+
   <script src="sidepanel.js"></script>
 </body>
 

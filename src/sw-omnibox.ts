@@ -1,1 +1,1 @@
-console.log("sw-omnibox.js");
+console.log("sw-omnibox.js")
