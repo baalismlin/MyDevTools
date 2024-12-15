@@ -6,9 +6,18 @@ My first chrome extension for my dev tools
 
 The Purpose:
 
-Integrate the dev tools into the sidepanel including:
+Providing the dev tools including:
 
-* timestamp convertion
-* copy history
+### String tools
 
-Draft a detailed specification document outlining the features, UI design, and user interactions
+* URL escape & unescap
+* Base64 encode & decode
+* JSON string <=> Java Plain Object
+* Typescript object <=> Java Plain Object
+
+### Random tools
+
+### Time tools
+
+* timestamp to datetime (UTC)
+* datetime (UTC) to timestamp
