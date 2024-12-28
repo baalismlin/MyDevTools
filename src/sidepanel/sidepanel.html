@@ -5,58 +5,47 @@
   <title>Side Panel</title>
 </head>
 
-<body class="font-mono ">
+<body class="bg-gray-50 min-w-[360px]">
 
-  <div class="divide-y divide-dashed">
-    <div class="container mx-auto pt-5 pl-3">
-      <h1 class="text-green-400">Timestamp to Datetime</h1>
-      <div class="container pt-5">
-        <label class="text-gray-700">Timestamp:</label>
-        <input
-          class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          type="text" id="timestampInput" />
-      </div>
+  <div class="container mx-auto p-4 max-w-2xl min-w-[360px]">
+    <h1 class="text-xl sm:text-2xl font-bold text-gray-800 mb-6">Timestamp Tools</h1>
 
-      <div class="container py-5">
-        <label class="text-gray-700">UTC:</label>
-        <label
-          class="appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-100"
-          id="datetimeLabel"></label>
-      </div>
-    </div>
+    <!-- 时间戳转时间 -->
+    <div class="bg-white rounded-lg shadow-sm p-4 mb-4">
+      <div class="flex flex-col space-y-3">
+        <label class="text-gray-700 font-medium">timestampe:</label>
+        <div class="grid grid-cols-2 gap-3">
+          <input type="number" id="timestamp-input"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+          <div class="text-gray-600 text-sm flex items-center px-3" id="date-result">
 
-    <div class="container mx-auto pt-5 pl-3">
-      <h1 class="text-green-400">Datetime to Timestamp</h1>
-      <div class="container pt-5">
-        <label class="text-gray-700">Datetime:</label>
-        <input
-          class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          type="date" id="dateInput" />
-      </div>
-
-      <div class="container pt-5">
-        <input
-          class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          type="time" id="timeInput" step="1" />
-        <input
-          class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          type="number" id="millisecondInput" min="0" max="60000" />
-      </div>
-
-      <div class="container py-5">
-        <label class="text-gray-700">Timestamp:</label>
-        <label
-          class="appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-100"
-          id="timestampLabel"></label>
+          </div>
+        </div>
       </div>
     </div>
 
+    <!-- 时间转时间戳 -->
+    <div class="bg-white rounded-lg shadow-sm p-4">
+      <div class="flex flex-col space-y-3">
+        <label class="text-gray-700 font-medium">time:</label>
+        <div class="grid grid-cols-2 gap-3">
+          <input type="datetime-local" id="date-input" step="0.001"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+          <div class="text-gray-600 text-sm flex items-center px-3" id="timestamp-result">
 
-
-
-    <div class="container mx-auto">
-
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="container mx-auto p-4 max-w-2xl min-w-[360px]">
+    <h1 class="text-xl sm:text-2xl font-bold text-gray-800 mb-6">String tools</h1>
+
+  </div>
+
+  <div class="container mx-auto p-4 max-w-2xl min-w-[360px]">
+    <h1 class="text-xl sm:text-2xl font-bold text-gray-800 mb-6">Random tools</h1>
 
   </div>
 

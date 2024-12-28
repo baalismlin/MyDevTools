@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 const timestampToDatetime = () => {
-  const timestampInput = document.getElementById('timestampInput') as HTMLInputElement
-  const datetimeLabel = document.getElementById('datetimeLabel') as HTMLLabelElement
+  const timestampInput = document.getElementById('timestamp-input') as HTMLInputElement
+  const datetimeLabel = document.getElementById('date-result') as HTMLLabelElement
 
   timestampInput?.addEventListener('input', () => {
     const timestamp = parseInt(timestampInput?.value)
@@ -22,31 +22,24 @@ const timestampToDatetime = () => {
 
   })
 
-  timestampInput.value = now.getTime().toString()
-  const event = new Event('input', { bubbles: true })
-  timestampInput.dispatchEvent(event)
+  // timestampInput.value = now.getTime().toString()
+  // const event = new Event('input', { bubbles: true })
+  // timestampInput.dispatchEvent(event)
 }
 
 const datetimeToTimestamp = () => {
-  const dateInput = document.getElementById('dateInput') as HTMLInputElement
-  const timeInput = document.getElementById('timeInput') as HTMLInputElement
-  const millisecondInput = document.getElementById('millisecondInput') as HTMLInputElement
-  const timestampLabel = document.getElementById('timestampLabel') as HTMLLabelElement
+  const dateInput = document.getElementById('date-input') as HTMLInputElement
+  const timestampLabel = document.getElementById('timestamp-result') as HTMLLabelElement
 
-  const arr = [dateInput, timeInput, millisecondInput].forEach(inputElement => {
-    inputElement?.addEventListener('input', () => {
-      const timestamp = Date.parse(`${dateInput.value}T${timeInput.value}.${millisecondInput.value}Z`)
-
-      timestampLabel.innerText = timestamp.toString()
-    })
+  dateInput?.addEventListener('input', () => {
+    console.log(dateInput.value)
+    const timestamp = Date.parse(dateInput.value)
+    timestampLabel.innerText = timestamp.toString()
   })
 
-  dateInput.value = `${now.getUTCFullYear()}-${getTwoDigit(now.getUTCMonth() + 1)}-${getTwoDigit(now.getUTCDate())}`
-  timeInput.value = `${getTwoDigit(now.getUTCHours())}:${getTwoDigit(now.getUTCMinutes())}:${getTwoDigit(now.getUTCSeconds())}`
-  millisecondInput.value = now.getUTCMilliseconds().toString()
-
-  const event = new Event('input', { bubbles: true })
-  millisecondInput.dispatchEvent(event)
+  // dateInput.value = `${now.getUTCFullYear()}-${getTwoDigit(now.getUTCMonth() + 1)}-${getTwoDigit(now.getUTCDate())}T${getTwoDigit(now.getUTCHours())}:${getTwoDigit(now.getUTCMinutes())}:${getTwoDigit(now.getUTCSeconds())}`
+  // const event = new Event('input', { bubbles: true })
+  // dateInput.dispatchEvent(event)
 }
 
 const getTwoDigit = (value: number) => ("0" + value).slice(-2)
