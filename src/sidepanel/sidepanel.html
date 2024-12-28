@@ -10,30 +10,26 @@
   <div class="container mx-auto p-4 max-w-2xl min-w-[360px]">
     <h1 class="text-xl sm:text-2xl font-bold text-gray-800 mb-6">Timestamp Tools</h1>
 
-    <!-- 时间戳转时间 -->
     <div class="bg-white rounded-lg shadow-sm p-4 mb-4">
       <div class="flex flex-col space-y-3">
-        <label class="text-gray-700 font-medium">timestampe:</label>
+        <label class="text-gray-700 font-medium">Convert timestampe to datetime:</label>
         <div class="grid grid-cols-2 gap-3">
           <input type="number" id="timestamp-input"
             class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
-          <div class="text-gray-600 text-sm flex items-center px-3" id="date-result">
-
-          </div>
+          <label class="text-gray-600 text-sm flex items-center px-3" id="date-result">
+          </label>
         </div>
       </div>
     </div>
 
-    <!-- 时间转时间戳 -->
     <div class="bg-white rounded-lg shadow-sm p-4">
       <div class="flex flex-col space-y-3">
-        <label class="text-gray-700 font-medium">time:</label>
+        <label class="text-gray-700 font-medium">Convert datetime to timestamp:</label>
         <div class="grid grid-cols-2 gap-3">
           <input type="datetime-local" id="date-input" step="0.001"
             class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
-          <div class="text-gray-600 text-sm flex items-center px-3" id="timestamp-result">
-
-          </div>
+          <label class="text-gray-600 text-sm flex items-center px-3" id="timestamp-result">
+          </label>
         </div>
       </div>
     </div>
@@ -41,12 +37,40 @@
 
   <div class="container mx-auto p-4 max-w-2xl min-w-[360px]">
     <h1 class="text-xl sm:text-2xl font-bold text-gray-800 mb-6">String tools</h1>
+    <div class="bg-white rounded-lg shadow-sm p-4 mb-4">
+      <div class="flex flex-col space-y-3">
+        <label class="text-gray-700 font-medium">URL escape:</label>
+        <input type="text" id="encoded-input"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+        <label class="text-gray-600 text-sm flex items-center px-3" id="decoded-result">
+        </label>
+      </div>
+    </div>
 
+    <div class="bg-white rounded-lg shadow-sm p-4 mb-4">
+      <div class="flex flex-col space-y-3">
+        <label class="text-gray-700 font-medium">URL unescape:</label>
+        <input type="text" id="decoded-input"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+        <label class="text-gray-600 text-sm flex items-center px-3" id="encoded-result">
+        </label>
+      </div>
+    </div>
   </div>
 
   <div class="container mx-auto p-4 max-w-2xl min-w-[360px]">
     <h1 class="text-xl sm:text-2xl font-bold text-gray-800 mb-6">Random tools</h1>
 
+    <div class="bg-white rounded-lg shadow-sm p-4 mb-4">
+      <div class="flex flex-col space-y-3">
+        <label class="text-gray-700 font-medium">Randomly selection:</label>
+        <textarea type="text" id="list-input"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+        </textarea>
+        <label class="text-gray-600 text-sm flex items-center px-3" id="selected-result">
+        </label>
+      </div>
+    </div>
   </div>
 
   <script src="sidepanel.js"></script>
