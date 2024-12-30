@@ -1,6 +1,3 @@
-import './sw-omnibox'
-import './sw-tips'
-
 
 chrome.runtime.onInstalled.addListener(() => {
   console.log('Extension installed')

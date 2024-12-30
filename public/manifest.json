@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "My Dev Tools",
+  "version": "1.0",
+  "description": "My First Extension",
+  "icons": {
+    "48": "icon.png"
+  },
+  "action": {
+    "default_icon": "icon.png",
+    "default_title": "Click to open panel"
+  },
+  "side_panel": {
+    "default_path": "index.html",
+    "default_icon": "icon.png",
+    "default_title": "My Sidebar"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": ["storage", "activeTab", "tabs", "sidePanel"],
+  "content_scripts": []
+}
