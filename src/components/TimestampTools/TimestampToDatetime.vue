@@ -1,30 +1,30 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
-import CopyableResult from "../CopyableResult.vue";
+  import { computed, ref } from 'vue'
+  import CopyableResult from '../CopyableResult.vue'
 
-const timestampRef = ref(0);
+  const timestampRef = ref(0)
 
-const datetimeResult = computed(() => {
-  let result = "";
-  const timestamp = timestampRef.value;
-  if (timestamp === 0) {
-    return result;
-  }
-
-  try {
-    if (isFinite(timestamp) && timestamp > 0) {
-      const datetime = new Date(timestamp);
-      result = datetime
-        .toUTCString()
-        .replace("GMT", `${datetime.getMilliseconds()}`)
-        .substring(5);
+  const datetimeResult = computed(() => {
+    let result = ''
+    const timestamp = timestampRef.value
+    if (timestamp === 0) {
+      return result
     }
-  } catch (error) {
-    console.error(error);
-    result = "Conversion Failed";
-  }
-  return result;
-});
+
+    try {
+      if (isFinite(timestamp) && timestamp > 0) {
+        const datetime = new Date(timestamp)
+        result = datetime
+          .toUTCString()
+          .replace('GMT', `${datetime.getMilliseconds()}`)
+          .substring(5)
+      }
+    } catch (error) {
+      console.error(error)
+      result = 'Conversion Failed'
+    }
+    return result
+  })
 </script>
 
 <template>

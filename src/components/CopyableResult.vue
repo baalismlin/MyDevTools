@@ -1,9 +1,9 @@
 <script setup lang="ts">
-const props = defineProps(["result"]);
+  const props = defineProps(['result'])
 
-function copyResult() {
-  navigator.clipboard.writeText(props.result);
-}
+  function copyResult() {
+    navigator.clipboard.writeText(props.result)
+  }
 </script>
 
 <template>

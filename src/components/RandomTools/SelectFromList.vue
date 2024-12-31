@@ -1,26 +1,26 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
-import CopyableResult from "../CopyableResult.vue";
+  import { computed, ref } from 'vue'
+  import CopyableResult from '../CopyableResult.vue'
 
-const itemListRef = ref("");
+  const itemListRef = ref('')
 
-const selectedResult = computed(() => {
-  let result = "";
-  const itemList = itemListRef.value.trim();
-  if (itemList === "") {
-    return result;
-  }
+  const selectedResult = computed(() => {
+    let result = ''
+    const itemList = itemListRef.value.trim()
+    if (itemList === '') {
+      return result
+    }
 
-  try {
-    const items = itemList.split(/\r\n|\r|\n/);
-    const randomIndex = Math.floor(Math.random() * items.length);
-    result = items[randomIndex];
-  } catch (error) {
-    console.error(error);
-    result = "Invalid Input List";
-  }
-  return result;
-});
+    try {
+      const items = itemList.split(/\r\n|\r|\n/)
+      const randomIndex = Math.floor(Math.random() * items.length)
+      result = items[randomIndex]
+    } catch (error) {
+      console.error(error)
+      result = 'Invalid Input List'
+    }
+    return result
+  })
 </script>
 
 <template>

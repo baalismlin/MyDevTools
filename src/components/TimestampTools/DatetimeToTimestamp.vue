@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
-import CopyableResult from "../CopyableResult.vue";
+  import { computed, ref } from 'vue'
+  import CopyableResult from '../CopyableResult.vue'
 
-const datetimeRef = ref(new Date().toISOString().slice(0, 19));
+  const datetimeRef = ref(new Date().toISOString().slice(0, 19))
 
-const timestampResult = computed(() => {
-  let result = "";
-  try {
-    const timestamp = Date.parse(datetimeRef.value);
-    result = timestamp.toString();
-  } catch (error) {
-    console.error(error);
-    result = "Conversion Failed";
-  }
-  return result;
-});
+  const timestampResult = computed(() => {
+    let result = ''
+    try {
+      const timestamp = Date.parse(datetimeRef.value)
+      result = timestamp.toString()
+    } catch (error) {
+      console.error(error)
+      result = 'Conversion Failed'
+    }
+    return result
+  })
 </script>
 
 <template>

@@ -1,28 +1,28 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
-import CopyableResult from "../CopyableResult.vue";
+  import { computed, ref } from 'vue'
+  import CopyableResult from '../CopyableResult.vue'
 
-const decodedUrlRef = ref("");
+  const decodedUrlRef = ref('')
 
-const encodedResult = computed(() => {
-  let result = "";
-  const decoded = decodedUrlRef.value.trim();
-  if (decoded === "") {
-    return result;
-  }
-
-  try {
-    if (decoded) {
-      // Encode URL
-      result = encodeURIComponent(decoded);
+  const encodedResult = computed(() => {
+    let result = ''
+    const decoded = decodedUrlRef.value.trim()
+    if (decoded === '') {
+      return result
     }
-  } catch (error) {
-    console.error(error);
-    result = "Encode Failed";
-  }
 
-  return result;
-});
+    try {
+      if (decoded) {
+        // Encode URL
+        result = encodeURIComponent(decoded)
+      }
+    } catch (error) {
+      console.error(error)
+      result = 'Encode Failed'
+    }
+
+    return result
+  })
 </script>
 
 <template>

@@ -1,28 +1,28 @@
 <script setup lang="ts">
-import DevTool from "@/components/DevTool.vue";
+  import DevTool from '@/components/DevTool.vue'
 
-import UrlEscape from "@/components/StringTools/UrlEscape.vue";
-import UrlUnescape from "@/components/StringTools/UrlUnescape.vue";
+  import UrlEscape from '@/components/StringTools/UrlEscape.vue'
+  import UrlUnescape from '@/components/StringTools/UrlUnescape.vue'
 
-import TimestampToDatetime from "@/components/TimestampTools/TimestampToDatetime.vue";
-import DatetimeToTimestamp from "@/components/TimestampTools/DatetimeToTimestamp.vue";
+  import TimestampToDatetime from '@/components/TimestampTools/TimestampToDatetime.vue'
+  import DatetimeToTimestamp from '@/components/TimestampTools/DatetimeToTimestamp.vue'
 
-import SelectFromList from "@/components/RandomTools/SelectFromList.vue";
+  import SelectFromList from '@/components/RandomTools/SelectFromList.vue'
 
-const devTools = [
-  {
-    title: "Time Tools",
-    tools: [DatetimeToTimestamp, TimestampToDatetime],
-  },
-  {
-    title: "String Tools",
-    tools: [UrlEscape, UrlUnescape],
-  },
-  {
-    title: "Random tools",
-    tools: [SelectFromList],
-  },
-];
+  const devTools = [
+    {
+      title: 'Time Tools',
+      tools: [DatetimeToTimestamp, TimestampToDatetime],
+    },
+    {
+      title: 'String Tools',
+      tools: [UrlEscape, UrlUnescape],
+    },
+    {
+      title: 'Random tools',
+      tools: [SelectFromList],
+    },
+  ]
 </script>
 
 <template>
