@@ -1,9 +1,9 @@
 <script setup lang="ts">
-  import ManPages from '@/components/CommandTools/ManPages.vue'
+  import TLDRSearch from '@/components/CommandTools/TLDRSearch.vue'
 </script>
 
 <template>
   <main>
-    <ManPages />
+    <TLDRSearch />
   </main>
 </template>

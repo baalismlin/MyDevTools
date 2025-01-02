@@ -1,8 +1,8 @@
 <script setup lang="ts">
   import DevTool from '@/components/DevTool.vue'
 
-  import UrlEscape from '@/components/CipherTools/UrlEscape.vue'
-  import UrlUnescape from '@/components/CipherTools/UrlUnescape.vue'
+  import URLCipher from '@/components/CipherTools/URLCipher.vue'
+  import Base64Encrypt from '@/components/CipherTools/Base64Cipher.vue'
 
   import TimestampToDatetime from '@/components/TimestampTools/TimestampToDatetime.vue'
   import DatetimeToTimestamp from '@/components/TimestampTools/DatetimeToTimestamp.vue'
@@ -16,7 +16,7 @@
     },
     {
       title: 'Cipher Tools',
-      tools: [UrlEscape, UrlUnescape],
+      tools: [URLCipher, Base64Encrypt],
     },
     {
       title: 'Random tools',
