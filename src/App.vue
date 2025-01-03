@@ -1,6 +1,8 @@
 <script setup lang="ts">
   import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router'
-  const routes = useRouter().getRoutes()
+  const routes = useRouter()
+    .getRoutes()
+    .filter((route) => route.aliasOf === undefined)
   const currentRoute = useRoute()
 </script>
 
