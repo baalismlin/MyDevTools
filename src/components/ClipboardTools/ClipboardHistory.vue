@@ -59,10 +59,33 @@
 </script>
 <template>
   <div class="max-w-2xl mx-auto p-4 bg-white rounded-lg shadow-md relative">
-    <div class="flex justify-between items-center mb-4">
-      <h2 class="text-xl font-semibold">Clipboard History</h2>
+    <div class="flex items-center mb-4">
+      <h2 class="text-xl font-semibold mr-2">Clipboard History</h2>
+      <div class="group relative">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5 text-gray-400 cursor-help"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+        <span
+          class="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity absolute top-full left-1/2 -translate-x-1/2 mt-2 px-3 py-2 text-sm text-gray-600 bg-white border rounded-lg shadow-lg whitespace-nowrap z-10"
+        >
+          If copied text doesn't appear here,<br />
+          please reload the page and try again.
+        </span>
+      </div>
+
       <button
-        class="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors"
+        class="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors ml-auto"
         @click="clearHistory"
       >
         Clear All
@@ -135,7 +158,7 @@
         v-if="clipboardItems.length === 0"
         class="text-center text-gray-500 py-8"
       >
-        No clipboard history yet, reload the page and try again please.
+        No clipboard history yet
       </div>
     </div>
   </div>
