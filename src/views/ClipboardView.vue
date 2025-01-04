@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import ClipboardHistory from '@/components/ClipboardTools/ClipboardHistory.vue'
+</script>
 
 <template>
-  <div></div>
+  <ClipboardHistory />
 </template>

@@ -19,6 +19,11 @@
     "service_worker": "background.js",
     "type": "module"
   },
-  "permissions": ["storage", "activeTab", "tabs", "sidePanel"],
-  "content_scripts": []
+  "permissions": ["storage", "scripting", "activeTab", "tabs", "sidePanel"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
 }
