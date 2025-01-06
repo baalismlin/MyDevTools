@@ -8,12 +8,15 @@
 
 <template>
   <label
-    class="text-gray-600 text-sm flex items-center px-3 cursor-pointer hover:bg-gray-50 relative group"
+    class="text-gray-600 text-sm flex items-center px-3 py-2 cursor-pointer hover:bg-gray-50 relative group w-full"
     @click="copyResult"
-    title="click to copy the content"
   >
-    {{ result }}
-    <span class="invisible group-hover:visible text-xs text-gray-400 ml-2">
+    <div class="flex-1 truncate" :title="result">
+      {{ result }}
+    </div>
+    <span
+      class="invisible group-hover:visible text-xs text-gray-400 ml-2 whitespace-nowrap"
+    >
       click to copy
     </span>
   </label>

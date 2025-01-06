@@ -12,6 +12,7 @@ Providing the common tools for developers.
 
 - URL escape & unescap
 - Base64 encode & decode
+- Hash function
 
 ### Random tools
 
@@ -38,6 +39,6 @@ Providing the common tools for developers.
 
 ## TODO List
 
-- Hash function
+- Binary Tools
 - JSON string <=> Java Plain Object
 - Typescript object <=> Java Plain Object

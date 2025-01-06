@@ -2,7 +2,8 @@
   import DevTool from '@/components/DevTool.vue'
 
   import URLCipher from '@/components/CipherTools/URLCipher.vue'
-  import Base64Encrypt from '@/components/CipherTools/Base64Cipher.vue'
+  import Base64Cipher from '@/components/CipherTools/Base64Cipher.vue'
+  import HashCipher from '@/components/CipherTools/HashCipher.vue'
 
   import TimestampToDatetime from '@/components/TimestampTools/TimestampToDatetime.vue'
   import DatetimeToTimestamp from '@/components/TimestampTools/DatetimeToTimestamp.vue'
@@ -16,7 +17,7 @@
     },
     {
       title: 'Cipher Tools',
-      tools: [URLCipher, Base64Encrypt],
+      tools: [URLCipher, Base64Cipher, HashCipher],
     },
     {
       title: 'Random tools',
